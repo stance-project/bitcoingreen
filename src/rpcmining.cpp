@@ -81,11 +81,9 @@ UniValue getnetworkhashps(const UniValue& params, bool fHelp)
             "\nReturns the estimated network hashes per second based on the last n blocks.\n"
             "Pass in [blocks] to override # of blocks, -1 specifies since last difficulty change.\n"
             "Pass in [height] to estimate the network speed at the time when a certain block was found.\n"
-
             "\nArguments:\n"
             "1. blocks     (numeric, optional, default=120) The number of blocks, or -1 for blocks since last difficulty change.\n"
             "2. height     (numeric, optional, default=-1) To estimate at the time of the given height.\n"
-
             "\nResult:\n"
             "x             (numeric) Hashes per second estimated\n"
             "\nExamples:\n" +
@@ -124,15 +122,12 @@ UniValue setgenerate(const UniValue& params, bool fHelp)
             "\nSet 'generate' true or false to turn generation on or off.\n"
             "Generation is limited to 'genproclimit' processors, -1 is unlimited.\n"
             "See the getgenerate call for the current setting.\n"
-
             "\nArguments:\n"
             "1. generate         (boolean, required) Set to true to turn on generation, false to turn off.\n"
             "2. genproclimit     (numeric, optional) Set the processor limit for when generation is on. Can be -1 for unlimited.\n"
             "                    Note: in -regtest mode, genproclimit controls how many blocks are generated immediately.\n"
-
             "\nResult\n"
             "[ blockhashes ]     (array, -regtest only) hashes of blocks generated\n"
-
             "\nExamples:\n"
             "\nSet the generation on with a limit of one processor\n" +
             HelpExampleCli("setgenerate", "true 1") +
